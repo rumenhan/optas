@@ -3,9 +3,7 @@ import React from 'react';
 import { Chart } from 'react-charts';
 import useChartConfig from './hooks/useChartConfig';
 import Box from './components/Box';
-import SyntaxHighlighter from './components/SyntaxHighlighter';
 
-let sourceCode;
 const defs = (
   <defs>
     <linearGradient id="0" x1="0" x2="0" y1="1" y2="0">
@@ -20,34 +18,17 @@ const defs = (
       <stop offset="0%" stopColor="#42E695" />
       <stop offset="100%" stopColor="#3BB2B8" />
     </linearGradient>
-    <linearGradient id="3" x1="0" x2="0" y1="1" y2="0">
-      <stop offset="0%" stopColor="#F4Ea0A" />
-      <stop offset="100%" stopColor="#df4081" />
-    </linearGradient>
   </defs>
 );
 export default function CustomStyles() {
   const [{ activeSeriesIndex, activeDatumIndex }, setState] = React.useState({
-    activeSeriesIndex: -1,
-    activeDatumIndex: -1
+    activeSeriesIndex: -2,
+    activeDatumIndex: -2
   });
   return (
     <div>
-      {JSON.stringify({ activeSeriesIndex, activeDatumIndex }, null, 2)}
       <MyChart
         elementType="line"
-        setState={setState}
-        activeDatumIndex={activeDatumIndex}
-        activeSeriesIndex={activeSeriesIndex}
-      />
-      <MyChart
-        elementType="area"
-        setState={setState}
-        activeDatumIndex={activeDatumIndex}
-        activeSeriesIndex={activeSeriesIndex}
-      />
-      <MyChart
-        elementType="bar"
         setState={setState}
         activeDatumIndex={activeDatumIndex}
         activeSeriesIndex={activeSeriesIndex}
@@ -62,7 +43,7 @@ function MyChart({
   setState
 }) {
   const { data, grouping, randomizeData } = useChartConfig({
-    series: 4,
+    series: 3,
     height: 200,
     grouping: 'primary',
     dataType: 'ordinal',
@@ -89,6 +70,7 @@ function MyChart({
     ],
     []
   );
+
   const getSeriesStyle = React.useCallback(
     (series) => ({
       color: `url(#${series.index % 4})`,
@@ -126,7 +108,6 @@ function MyChart({
   );
   return (
     <>
-      <button onClick={randomizeData}>Randomize Data</button>
       <br />
       <br />
       <Box>
@@ -143,7 +124,6 @@ function MyChart({
         />
       </Box>
       <br />
-      <SyntaxHighlighter code={sourceCode} />
     </>
   );
 }

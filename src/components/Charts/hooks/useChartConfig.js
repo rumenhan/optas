@@ -46,7 +46,7 @@ export default function useChartConfig({
   series,
   useR,
   show = [],
-  count = 1,
+  count = 0,
   resizable = true,
   canRandomize = true,
   dataType = 'time',
@@ -63,7 +63,7 @@ export default function useChartConfig({
   tooltipAlign = 'auto',
   grouping = 'primary',
   snapCursor = true,
-  datums = 10
+  datums = 7
 }) {
   const [state, setState] = React.useState({
     count,
@@ -147,16 +147,16 @@ function makeSeries(i, dataType, useR, datums) {
   // const length = 5 + Math.round(Math.random() * 15)
   const length = datums;
   const min = 0;
-  const max = 100;
-  const rMin = 2;
-  const rMax = 20;
+  const max = 4;
+  const rMin = 1;
+  const rMax = 1;
   const nullChance = 0;
   return {
     label: `Series ${i + 1}`,
     datums: [...new Array(length)].map((_, i) => {
       let x = start + i;
       if (dataType === 'ordinal') {
-        x = `Ordinal Group ${x}`;
+        x = `2021/01/${x + 1}`;
       }
       if (dataType === 'time') {
         x = new Date(startDate.getTime() + 60 * 1000 * 30 * i);
