@@ -12,8 +12,8 @@ const Dashboard = () => (
           <h2 className="max-w-7xl mx-auto mt-8 px-4 text-lg leading-6 font-medium text-cool-gray-900 sm:px-6 lg:px-8">
             Overview
           </h2>
-          <div className="lg:flex">
-            <div className="lg:w-2/3">
+          <div>
+            <div>
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:pl-8 lg:pr-5">
 
                 <div className="mt-2 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -129,12 +129,11 @@ const Dashboard = () => (
               </div>
 
             </div>
-            <div className="lg:w-1/3 px-6 lg:pl-0">
+            {/* <div className="lg:w-1/3 px-6 lg:pl-0">
               <div className="bg-white overflow-hidden shadow rounded-lg mt-2 px-4">
                 <div className="p-5">
                   <div className="flex items-center">
                     <div className="flex-shrink-0">
-                      {/* Heroicon name: scale */}
                       <svg className="h-6 w-6 text-cool-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
                       </svg>
@@ -154,7 +153,7 @@ const Dashboard = () => (
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </main>
