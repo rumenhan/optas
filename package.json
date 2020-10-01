@@ -1,0 +1,63 @@
+{
+  "name": "react-tailwind-starter",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@stripe/react-stripe-js": "^1.1.2",
+    "@stripe/stripe-js": "^1.9.0",
+    "@tailwindcss/ui": "^0.6.2",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "react": "^16.13.1",
+    "react-charts": "^2.0.0-beta.7",
+    "react-dom": "^16.13.1",
+    "react-resizable": "^1.11.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^3.4.3",
+    "react-syntax-highlighter": "^13.5.3",
+    "tailwindcss": "1.8.1"
+  },
+  "scripts": {
+    "purge:css": "cross-env NODE_ENV=production postcss src/tailwind.css -o src/index.css",
+    "build:css": "postcss src/tailwind.css -o src/index.css",
+    "watch:css": "postcss src/tailwind.css -o src/index.css -w",
+    "start": "npm run build:css && react-scripts start",
+    "build": "npm run purge:css && react-scripts build && echo '/* /index.html 200' | cat >build/_redirects",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint '**/*.{js,jsx}'",
+    "lint:fix": "eslint --fix '**/*.{js,jsx}'",
+    "lint:debug": "DEBUG=eslint:cli-engine eslint '**/*.{js,jsx}'",
+    "eslint-check": "eslint --print-config .eslintrc.json | eslint-config-prettier-check"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.8.0",
+    "cross-env": "^7.0.2",
+    "cssnano": "^4.1.10",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.1",
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "postcss-cli": "^7.1.1",
+    "prettier": "^2.1.2"
+  }
+}

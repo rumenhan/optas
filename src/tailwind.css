@@ -1,0 +1,11 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@tailwind css/ui;
+
+.bg-blue-600 {
+    background-color: #1438F5;
+}
