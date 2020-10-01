@@ -15,6 +15,11 @@ import Dashboard from 'pages/Dashboard';
 import Customers from 'pages/Customers';
 
 function App() {
+  //   const unAuthenticatedRoutes = (
+  //       <>
+  //       </>
+  //   )
+
   return (
     <>
       <Header />
