@@ -22,7 +22,19 @@ const RewardPage = () => (
           Please confirm your monthly payment per completed user profile.
         </p>
         <div className="mt-10">
-          <input id="company_website" className="form-input block pl-16 sm:pl-14 sm:text-sm sm:leading-5 py-3 rounded-4 w-64" placeholder="10 $" />
+          <div className="mt-1 relative rounded-md shadow-sm md:w-64 sm:w-full">
+            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <span className="text-gray-500 sm:text-sm sm:leading-5">
+                $
+              </span>
+            </div>
+            <input id="price" className="form-input block w-full py-3 pl-7 pr-12 sm:text-sm sm:leading-5" placeholder="0.00" aria-describedby="price-currency" />
+            <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+              <span className="text-gray-500 sm:text-sm sm:leading-5" id="price-currency">
+                USD
+              </span>
+            </div>
+          </div>
           <p className=" max-w-5xl leading-7 text-gray-500"><i>Average Payment is $1 month.</i></p>
           <div className="mt-6 sm:max-w-sm md:max-w-md">
             <span className="block w-full rounded-md shadow-sm">
