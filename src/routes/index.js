@@ -14,6 +14,8 @@ import RewardPage from 'pages/RewardPage';
 import DashboardLayout from 'layout/DashboardLayout';
 import DashboardOverview from 'pages/DashboardOverview';
 import Customers from 'pages/Customers';
+import DashboardPedningUsers from 'pages/DashboardPedningUsers';
+import DashboardUserProfile from 'pages/DashboardUserProfile';
 
 const FrontendRoutes = (props) => (
   <>
@@ -22,7 +24,6 @@ const FrontendRoutes = (props) => (
       <Route exact path="/login" component={Login} />
       <Route exact path="/register" component={Register} />
       <Route exact path="/" component={Home} />
-      <Route exact path="/customers" component={Customers} />
       <Route exact path="/connect-shopify" component={ConnectShopify} />
       <Route exact path="/stripe-checkout" component={StripeCheckout} />
       <Route exact path="/pricing" component={PricePlanPage} />
@@ -36,8 +37,10 @@ const LayoutTest = () => <h1> This is the Content </h1>;
 
 const DashboardRoutes = (props) => (
   <DashboardLayout>
-    <Route exact path="/dashboard/test" component={LayoutTest} />
+    <Route exact path="/dashboard/customers" component={Customers} />
     <Route exact path="/dashboard/overview" component={DashboardOverview} />
+    <Route exact path="/dashboard/pending-users" component={DashboardPedningUsers} />
+    <Route exact path="/dashboard/customers/profile/" component={DashboardUserProfile} />
   </DashboardLayout>
 );
 

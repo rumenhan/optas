@@ -20,6 +20,14 @@ const menuItems = [
   {
     title: 'Customers',
     url: '/dashboard/customers'
+  },
+  {
+    title: 'Pedinng Users',
+    url: '/dashboard/pending-users'
+  },
+  {
+    title: 'User Profile',
+    url: '/dashboard/customers/profile'
   }
 ];
 
