@@ -6,10 +6,6 @@ const DashboardLayout = (props) => {
   const [sidebarCollapse, setSidbarCollape] = useState(true);
   const [profileCollapse, setProfileCollapse] = useState(false);
 
-  console.log('=======+++++++++++++++++++++++=========');
-  console.log('sidebarCollapse', sidebarCollapse);
-
-  console.log('=======+++++++++++++++++++++++=========');
   return (
 
     <div className="h-screen flex overflow-hidden bg-cool-gray-100">
